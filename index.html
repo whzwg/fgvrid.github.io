@@ -1,0 +1,2611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ICPR 2020 Workshop</title>
+<meta name="description" content="">
+<meta name="theme-color" content="#a2251c">
+<meta name="author" content="Jesse Chou">
+<link rel="shortcut icon" href="img/favicon.png">
+	
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.knob.js"></script>
+<script src="js/jquery.throttle.js"></script>
+<script src="js/jquery.classycountdown.js"></script>
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.classycountdown.css" />
+	
+<style type="text/css">
+@keyframes fadeIn {
+ 0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
+.fade-in, .banner, .banner-heading-text-1, .banner-heading-text-2, .banner-heading-text-3, .banner-text-1 {
+    animation-name: fadeIn;
+}
+ @keyframes fadeInDown {
+ 0% {
+ opacity: 0;
+ transform: translate3d(0, -30px, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+.fade-in-down {
+    animation-name: fadeInDown;
+}
+ @keyframes fadeInLeft {
+ 0% {
+ opacity: 0;
+ transform: translate3d(-30px, 0, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+.fade-in-left, .logo {
+    animation-name: fadeInLeft;
+}
+ @keyframes fadeInRight {
+ 0% {
+ opacity: 0;
+ transform: translate3d(30px, 0, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+.fade-in-right, .navigation {
+    animation-name: fadeInRight;
+}
+ @keyframes fadeInUp {
+ 0% {
+ opacity: 0;
+ transform: translate3d(0, 30px, 0);
+}
+ 100% {
+ opacity: 1;
+ transform: none;
+}
+}
+.fade-in-up, .banner-button-1, .banner-button-2 {
+    animation-name: fadeInUp;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sr {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+	
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+/* 2 */ }
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+    margin: 0;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+/* 2 */ }
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+/* 2 */ }
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+    background-color: transparent;
+}
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+/* 2 */ }
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b, strong {
+    font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code, kbd, samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+/* 2 */ }
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+    font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+    border-style: none;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+/* 2 */ }
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button, input {
+    /* 1 */
+    overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button, select {
+    /* 1 */
+    text-transform: none;
+}
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+ border-style: none;
+ padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+ outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+/* 1 */ }
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+    vertical-align: baseline;
+}
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+    overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"], [type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+/* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+ height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+/* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+ -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+ -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+/* 2 */ }
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+    display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+    display: list-item;
+}
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+    display: none;
+}
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+    display: none;
+}
+/* ==========================================================================
+
+========================================================================== */
+
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container, .container-full {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+.container-m, .container-full-m {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container, .container-m {
+    width: 748px;
+}
+.container-full-m {
+    width: auto;
+}
+}
+
+@media only screen and (min-width: 980px) {
+.container-l, .container-full-l {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container, .container-l {
+    width: 960px;
+}
+.container-full-l {
+    width: auto;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.container-xl, .container-full-xl {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container, .container-xl {
+    width: 1180px;
+}
+.container-full-xl {
+    width: auto;
+}
+}
+
+/* ==========================================================================
+
+
+========================================================================== */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-1-2, .col-1-3, .col-2-3, .col-1-4, .col-3-4, .col-1-5, .col-2-5, .col-3-5, .col-4-5 {
+    flex: 0 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+}
+.col-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+}
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+}
+.col-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+}
+.col-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+}
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.col-1-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-1-3 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-2-3 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.col-1-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-3-4 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-1-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.col-2-5 {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.col-3-5 {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.col-4-5 {
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+.col-full {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+.row-m {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-1-m, .col-2-m, .col-3-m, .col-4-m, .col-5-m, .col-6-m, .col-7-m, .col-8-m, .col-9-m, .col-10-m, .col-11-m, .col-12-m, .col-1-2-m, .col-1-3-m, .col-2-3-m, .col-1-4-m, .col-3-4-m, .col-1-5-m, .col-2-5-m, .col-3-5-m, .col-4-5-m {
+    flex: 0 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-1-m {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+}
+.col-2-m {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+}
+.col-3-m {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-4-m {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-5-m {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+.col-6-m {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-7-m {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+}
+.col-8-m {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.col-9-m {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-10-m {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+}
+.col-11-m {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+}
+.col-12-m {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.col-1-2-m {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-1-3-m {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-2-3-m {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.col-1-4-m {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-3-4-m {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-1-5-m {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.col-2-5-m {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.col-3-5-m {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.col-4-5-m {
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+.col-full-m {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+}
+
+@media only screen and (min-width: 980px) {
+.row-l {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-1-l, .col-2-l, .col-3-l, .col-4-l, .col-5-l, .col-6-l, .col-7-l, .col-8-l, .col-9-l, .col-10-l, .col-11-l, .col-12-l, .col-1-2-l, .col-1-3-l, .col-2-3-l, .col-1-4-l, .col-3-4-l, .col-1-5-l, .col-2-5-l, .col-3-5-l, .col-4-5-l {
+    flex: 0 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-1-l {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+}
+.col-2-l {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+}
+.col-3-l {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-4-l {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-5-l {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+.col-6-l {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-7-l {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+}
+.col-8-l {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.col-9-l {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-10-l {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+}
+.col-11-l {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+}
+.col-12-l {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.col-1-2-l {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-1-3-l {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-2-3-l {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.col-1-4-l {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-3-4-l {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-1-5-l {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.col-2-5-l {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.col-3-5-l {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.col-4-5-l {
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+.col-full-l {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.row-xl {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col-1-xl, .col-2-xl, .col-3-xl, .col-4-xl, .col-5-xl, .col-6-xl, .col-7-xl, .col-8-xl, .col-9-xl, .col-10-xl, .col-11-xl, .col-12-xl, .col-1-2-xl, .col-1-3-xl, .col-2-3-xl, .col-1-4-xl, .col-3-4-xl, .col-1-5-xl, .col-2-5-xl, .col-3-5-xl, .col-4-5-xl {
+    flex: 0 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-1-xl {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+}
+.col-2-xl {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+}
+.col-3-xl {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-4-xl {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-5-xl {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+.col-6-xl {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-7-xl {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+}
+.col-8-xl {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.col-9-xl {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-10-xl {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+}
+.col-11-xl {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+}
+.col-12-xl {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.col-1-2-xl {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-1-3-xl {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.col-2-3-xl {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.col-1-4-xl {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-3-4-xl {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.col-1-5-xl {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.col-2-5-xl {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.col-3-5-xl {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.col-4-5-xl {
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+.col-full-xl {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+}
+
+/* ==========================================================================
+
+========================================================================== */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #676767;
+    font-weight: 400;
+    background: #fff;
+}
+p {
+    margin: 0 0 20px 0;
+}
+a {
+    color: #ff5717;
+    text-decoration: underline;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a:hover {
+    color: #ff5717;
+    outline-width: 0;
+    text-decoration: none;
+}
+a:active {
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0 0 .5em 0;
+}
+h1, .fs-1 {
+    font-size: 40px;
+    line-height: 46px;
+}
+h2, .fs-2, .big-heading {
+    font-size: 30px;
+    line-height: 36px;
+}
+h3, .fs-3 {
+    font-size: 22px;
+    line-height: 28px;
+}
+h4, .fs-4, .lead, .proposers-heading {
+    font-size: 18px;
+    line-height: 24px;
+}
+h5, .fs-5 {
+    font-size: 16px;
+    line-height: 22px;
+}
+h6, .fs-6, .small-heading {
+    font-size: 14px;
+    line-height: 20px;
+}
+h1 {
+    color: #000;
+    font-weight: 700;
+}
+h2 {
+    color: #000;
+    font-weight: 700;
+}
+h3 {
+    color: #000;
+    font-weight: 500;
+}
+h4 {
+    color: #000;
+    font-weight: 500;
+}
+h5 {
+    color: #000;
+    font-weight: 500;
+}
+h6 {
+    color: #000;
+    font-weight: 500;
+}
+b, strong, .strong {
+    font-weight: 700;
+}
+em, .em {
+    font-style: italic;
+}
+hr, .hr {
+    height: 1px;
+    background: #eee;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+code, .code, kbd, .kbd, pre, .pre, samp, .samp {
+    font-family: monospace, monospace;
+    font-size: 13px;
+    line-height: 18px;
+    word-wrap: break-word;
+    color: #000;
+    background-color: #f7f7f7;
+    font-weight: normal;
+    padding: 0;
+    white-space: pre-wrap;
+}
+pre, .pre {
+    padding: 10px 0;
+    overflow: auto;
+    border: 1px solid #e7e7e7;
+}
+blockquote, .blockquote {
+    font-family: sans-serif;
+    font-style: italic;
+    margin: 20px 0;
+}
+blockquote p, .blockquote p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+blockquote cite, .blockquote cite {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 700;
+    font-style: normal;
+}
+.grey {
+    color: #545454;
+}
+.white {
+    color: #fff;
+}
+.yellow {
+    color: #ffc13b;
+}
+.lead {
+    font-weight: 300;
+    color: #545454;
+}
+.small-heading {
+    display: block;
+    font-weight: 100;
+    padding: 5px 0;
+    text-transform: capitalize;
+    color: #545454;
+}
+.small-heading-secondary {
+    color: #2e2e2e;
+}
+.big-heading {
+    display: block;
+}
+.big-heading-secondary {
+    color: #000;
+}
+
+	
+.heading {
+    display: block;
+    color: #2e2e2e;
+}
+.heading:after {
+    content: "";
+    width: 14px;
+    height: 2px;
+    display: block;
+    background: #2e2e2e;
+    margin-top: 10px;
+}
+.header {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+.header {
+    border-bottom-color: transparent;
+}
+}
+.logo {
+    width: 300px;
+    height: 71px;
+    background: url("img/LOGO.png") 50% 50% no-repeat;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+}
+.logo:hover {
+    background: url("img/LOGO_Grey.png") 50% 50% no-repeat;
+}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 30px 0 10px 0;
+}
+
+@media only screen and (min-width: 768px) {
+.menu {
+    padding: 15px 0 0 0;
+}
+}
+.menu-item {
+    padding: 0;
+    display: inline-block;
+    margin: 0 10px;
+}
+.menu-item > a {
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu-item > a:hover {
+    transition: all .2s;
+    color: #a2251c;
+}
+.banner {
+    background: url(img/banner.jpg) 50% 50% no-repeat #000;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.banner:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.banner:after {
+    height: 200px;
+    display: block;
+    content: "";
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSIxOTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTAgMi41OGw3OTUuOTE4IDExMS42ODJMMTIwMCAwdjE5MEguMjdMLS4wMDUgMi41OHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=) 50% 50% no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 1px;
+    z-index: 200;
+}
+.banner-inner {
+    position: relative;
+    z-index: 100;
+}
+.logo {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+.navigation {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+.banner {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+.banner-heading {
+    color: #a2251C;
+}
+.banner-heading-text-1 {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+.banner-heading-text-2 {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 2.7s;
+}
+.banner-heading-text-3 {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 3.4s;
+}
+.banner-text-1 {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 3.7s;
+}
+.topic-block {
+    position: relative;
+    z-index: 300;
+    margin-top: -50px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 980px) {
+.topic-block {
+	background:  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgAQMAAACxAfVuAAAABlBMVEX////w8PBJB7MPAAAAb0lEQVR4AWPgcRY4YohGMAi1LNTwQiMYFDmcBFrQCAanCUs0udAIhpZECTdBNIKhR5njkAEawRAk0qrogUZgtyhgiiqnExrB0JEk0aaIRpDno1Efjfpo1EejPhr10aiPRn006qNRH436aNRHoz4CAJ/efK4MkeqgAAAAAElFTkSuQmCC) 0 0 repeat #f1f1f1;
+    padding-bottom: 40px;
+}
+}
+
+.proposers-block {
+    background: #CD5C5C;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+.proposers-block {
+    padding-top: 60px;
+}
+}
+.proposers-list {
+    list-style: none;
+    padding-left: 15px;
+}
+.proposers {
+    margin: 0 0 30px 0;
+}
+
+@media only screen and (min-width: 768px) {
+.proposers {
+    margin: 0;
+    min-height: 120px;
+}
+}
+.proposers {
+    padding-left: 80px;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+.proposers {
+    width: 50%;
+}
+}
+.proposers:before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+.proposers-heading {
+    font-weight: 700;
+}
+
+.work-block {
+	background:  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgAQMAAACxAfVuAAAABlBMVEX////w8PBJB7MPAAAAb0lEQVR4AWPgcRY4YohGMAi1LNTwQiMYFDmcBFrQCAanCUs0udAIhpZECTdBNIKhR5njkAEawRAk0qrogUZgtyhgiiqnExrB0JEk0aaIRpDno1Efjfpo1EejPhr10aiPRn006qNRH436aNRHoz4CAJ/efK4MkeqgAAAAAElFTkSuQmCC) 0 0 repeat #f1f1f1;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+.work-block {
+    padding-top: 60px;
+}
+}
+.work-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.work-item {
+    position: relative;
+    display: block;
+    min-height: 200px;
+    color: #000;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+.work-item {
+    margin-bottom: 0;
+}
+}
+.work-item:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #2e2e2e;
+    background-color: rgba(46, 46, 46, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .2s;
+    z-index: 1;
+}
+.work-item img {
+    width: 100%;
+    display: block;
+    transition: all .3s;
+}
+
+@media only screen and (min-width: 768px) {
+.work-item img {
+    width: auto;
+    height: 300px;
+}
+}
+.work-item .work-item-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    z-index: 5;
+    padding: 20px;
+}
+.work-item:hover .work-item-inner {
+    opacity: 1;
+}
+.work-item:hover:after {
+    background-color: #161616;
+    background-color: rgba(22, 22, 22, 0.6);
+}
+.work-item:hover img {
+    transform: scale(1.1);
+    opacity: .9;
+}
+.work-heading-small {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: block;
+}
+.work-heading-big {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: block;
+}
+.proposer-block {
+    background: #CD5C5C;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+.proposer-block {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+}
+.proposer-list {
+    list-style: none;
+    padding: 0 0 40px 0;
+    margin: 0;
+    position: relative;
+}
+.proposer-item {
+    margin: 0;
+    display: block;
+    color: #000;
+    min-height: 260px;
+}
+
+@media only screen and (min-width: 768px) {
+.proposer-item {
+    min-height: 240px;
+}
+}
+.proposer-item cite {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+}
+.proposer-item p {
+    color: #000;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+.proposer-avatar {
+    margin-right: 12px;
+}
+.proposer-avatar img {
+    border-radius: 100%;
+    border: 3px solid #fee19b;
+    display: block;
+}
+.proposer-author {
+    display: block;
+    padding-top: 6px;
+}
+.proposer-status {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 200;
+}
+.proposer-tab {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -6px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.proposer-tab:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    border-radius: 100%;
+    margin-top: -40%;
+    margin-left: -40%;
+}
+.proposer-checkbox {
+    display: none;
+}
+.proposer-checkbox:checked + label:before {
+    background: #000;
+}
+.proposer-checkbox + label + .proposer-item {
+    display: none;
+}
+.proposer-checkbox:checked + label + .proposer-item {
+    display: block;
+}
+.proposer-tab-1 {
+    transform: translateX(-60px);
+}
+.proposer-tab-2 {
+    transform: translateX(-30px);
+}
+.proposer-tab-3 {
+    transform: translateX(0px);
+}
+.proposer-tab-4 {
+    transform: translateX(30px);
+}
+.proposer-tab-5 {
+    transform: translateX(60px);
+}
+.contact-block {
+    background:  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgAQMAAACxAfVuAAAABlBMVEX////w8PBJB7MPAAAAb0lEQVR4AWPgcRY4YohGMAi1LNTwQiMYFDmcBFrQCAanCUs0udAIhpZECTdBNIKhR5njkAEawRAk0qrogUZgtyhgiiqnExrB0JEk0aaIRpDno1Efjfpo1EejPhr10aiPRn006qNRH436aNRHoz4CAJ/efK4MkeqgAAAAAElFTkSuQmCC) 0 0 repeat #f1f1f1;
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #000;
+}
+.contact-button {
+    display: block;
+    width: 100%;
+}
+.contact-icon {
+    margin: 0 0 5px 0;
+    position: relative;
+    padding-left: 30px;
+}
+.contact-icon:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    margin-right: 10px;
+}
+.contact-icon-location:before {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTguMDAxIDguODczYzEuNjU1IDAgMy0xLjM0NiAzLTNzLTEuMzQ1LTMtMy0zLTMgMS4zNDUtMyAzIDEuMzQ1IDMgMyAzem0wLTUuNWMxLjM3OSAwIDIuNSAxLjEyMSAyLjUgMi41cy0xLjEyMSAyLjUtMi41IDIuNS0yLjUtMS4xMjEtMi41LTIuNSAxLjEyMS0yLjUgMi41LTIuNXpNOCAwQzQuNjkxIDAgMiAyLjY1OCAyIDZjMCAzLjUgMy4wMDEgNy4wOCA1LjE4OCA5LjU5Ny4wMDguMDEuMzU5LjQwMi43OTMuNDAyaC4wMzljLjQzNCAwIC43ODUtLjM5My43OTMtLjQwMkMxMS4wMDEgMTMuMDggMTQuMDAyIDkuNTAxIDE0LjAwMiA2YzAtMy4zNDItMi42OTEtNi02LjAwMS02em0uMDU5IDE0Ljk0MWEuNzAyLjcwMiAwIDAgMS0uMDY3LjA0OWMtLjAwNS0uMDE0LS4wNDItLjA0My0uMDY0LS4wNjZDNi4wOTYgMTIuODE2IDMuMDAyIDkuMjU3IDMuMDAyIDZjMC0yLjc1NyAyLjI0NC01IDUtNWE1LjAwNyA1LjAwNyAwIDAgMSA1LjAwMSA1LjAwMWMwIDMuMjU2LTMuMDk0IDYuODE1LTQuOTQyIDguOTQxeiIvPjwvc3ZnPg==) 50% 50% no-repeat;
+}
+.contact-icon-phone:before {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTEyIDBINGExLjUgMS41IDAgMCAwLTEuNSAxLjV2MTNBMS41IDEuNSAwIDAgMCA0IDE2aDhhMS41IDEuNSAwIDAgMCAxLjUtMS41di0xM0ExLjUgMS41IDAgMCAwIDEyIDB6bS41IDE0LjVjMCAuMjc1LS4yMjUuNS0uNS41SDRhLjUuNSAwIDAgMS0uNS0uNXYtMS4wMDJoOVYxNC41em0wLTEuNTAyaC05VjNoOXY5Ljk5OHptMC0xMC40OThoLTl2LTFBLjUuNSAwIDAgMSA0IDFoOGEuNS41IDAgMCAxIC41LjV2MXpNOSAxLjc1YS4yNS4yNSAwIDAgMS0uMjUuMjVoLTEuNWEuMjUuMjUgMCAxIDEgMC0uNWgxLjVhLjI1LjI1IDAgMCAxIC4yNS4yNXptLS41IDEyLjQ5OGMwIC4xMzctLjExMy4yNS0uMjUuMjVoLS41YS4yNS4yNSAwIDEgMSAwLS41aC41YS4yNS4yNSAwIDAgMSAuMjUuMjV6Ii8+PC9zdmc+) 50% 50% no-repeat;
+}
+.contact-icon-email:before {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHBhdGggZD0iTTE0IDIuNUgyYTIgMiAwIDAgMC0yIDJWMTFhMiAyIDAgMCAwIDIgMmgxMmEyIDIgMCAwIDAgMi0yVjQuNWEyIDIgMCAwIDAtMi0yek0xIDUuMTI1TDQuNDk5IDcuNzUgMSAxMC4zNzV2LTUuMjV6TTE1IDExYzAgLjU1Mi0uNDQ5IDEtMSAxSDJjLS41NTEgMC0xLS40NDgtMS0xbDMuOTE2LTIuOTM4TDcuMSA5LjcwMWExLjUwMiAxLjUwMiAwIDAgMCAxLjc5OSAwbDIuMTg0LTEuNjM5TDE0Ljk5OSAxMXptMC0uNjI1TDExLjUgNy43NSAxNSA1LjEyNXY1LjI1ek04LjYgOS4zMDFjLS4xNzUuMTMxLS4zODIuMi0uNi4ycy0uNDI1LS4wNjktLjYtLjJMMSA0LjVjMC0uNTUxLjQ0OS0xIDEtMWgxMmMuNTUxIDAgMSAuNDQ5IDEgMUw4LjU5OSA5LjMwMXoiLz48L3N2Zz4=) 50% 50% no-repeat;
+}
+
+
+/* ==========================================================================
+
+========================================================================== */
+.font-100 {
+    font-weight: 100;
+}
+.font-200 {
+    font-weight: 200;
+}
+.font-300 {
+    font-weight: 300;
+}
+.font-400 {
+    font-weight: 400;
+}
+.font-500 {
+    font-weight: 500;
+}
+.font-600 {
+    font-weight: 600;
+}
+.font-700 {
+    font-weight: 700;
+}
+.font-800 {
+    font-weight: 800;
+}
+.font-900 {
+    font-weight: 900;
+}
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+.text-left-m {
+    text-align: left;
+}
+.text-right-m {
+    text-align: right;
+}
+.text-center-m {
+    text-align: center;
+}
+}
+
+@media only screen and (min-width: 980px) {
+.text-left-l {
+    text-align: left;
+}
+.text-right-l {
+    text-align: right;
+}
+.text-center-l {
+    text-align: center;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.text-left-xl {
+    text-align: left;
+}
+.text-right-xl {
+    text-align: right;
+}
+.text-center-xl {
+    text-align: center;
+}
+}
+/* ==========================================================================
+
+
+========================================================================== */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.no-float {
+    float: none;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.static {
+    position: static;
+}
+.fixed {
+    position: fixed;
+}
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}
+.inline-block {
+    display: inline-block;
+}
+.inline {
+    display: inline;
+}
+.flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+.flex-space-around {
+    justify-content: space-around;
+}
+.flex-space-between {
+    justify-content: space-between;
+}
+.flex-start {
+    justify-content: flex-start;
+}
+.flex-center {
+    justify-content: center;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.flex-top {
+    align-items: flex-start;
+}
+.flex-middle {
+    align-items: center;
+}
+.flex-bottom {
+    align-items: flex-end;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-no-wrap {
+    flex-wrap: nowrap;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+@media only screen and (min-width: 768px) {
+.no-float-m {
+    float: none;
+}
+.no-padding-m {
+    padding: 0;
+}
+.no-margin-m {
+    margin: 0;
+}
+.relative-m {
+    position: relative;
+}
+.absolute-m {
+    position: absolute;
+}
+.static-m {
+    position: static;
+}
+.fixed-m {
+    position: fixed;
+}
+.none-m {
+    display: none;
+}
+.block-m {
+    display: block;
+}
+.inline-block-m {
+    display: inline-block;
+}
+.inline-m {
+    display: inline;
+}
+.flex-m {
+    display: flex;
+}
+.flex-row-m {
+    flex-direction: row;
+}
+.flex-row-reverse-m {
+    flex-direction: row-reverse;
+}
+.flex-column-m {
+    flex-direction: column;
+}
+.flex-column-reverse-m {
+    flex-direction: column-reverse;
+}
+.flex-space-around-m {
+    justify-content: space-around;
+}
+.flex-space-between-m {
+    justify-content: space-between;
+}
+.flex-start-m {
+    justify-content: flex-start;
+}
+.flex-center-m {
+    justify-content: center;
+}
+.flex-end-m {
+    justify-content: flex-end;
+}
+.flex-top-m {
+    align-items: flex-start;
+}
+.flex-middle-m {
+    align-items: center;
+}
+.flex-bottom-m {
+    align-items: flex-end;
+}
+.flex-wrap-m {
+    flex-wrap: wrap;
+}
+.flex-no-wrap-m {
+    flex-wrap: nowrap;
+}
+.left-m {
+    float: left;
+}
+.right-m {
+    float: right;
+}
+}
+
+@media only screen and (min-width: 980px) {
+.no-float-l {
+    float: none;
+}
+.no-padding-l {
+    padding: 0;
+}
+.no-margin-l {
+    margin: 0;
+}
+.relative-l {
+    position: relative;
+}
+.absolute-l {
+    position: absolute;
+}
+.static-l {
+    position: static;
+}
+.fixed-l {
+    position: fixed;
+}
+.none-l {
+    display: none;
+}
+.block-l {
+    display: block;
+}
+.inline-block-l {
+    display: inline-block;
+}
+.inline-l {
+    display: inline;
+}
+.flex-l {
+    display: flex;
+}
+.flex-row-l {
+    flex-direction: row;
+}
+.flex-row-reverse-l {
+    flex-direction: row-reverse;
+}
+.flex-column-l {
+    flex-direction: column;
+}
+.flex-column-reverse-l {
+    flex-direction: column-reverse;
+}
+.flex-space-around-l {
+    justify-content: space-around;
+}
+.flex-space-between-l {
+    justify-content: space-between;
+}
+.flex-start-l {
+    justify-content: flex-start;
+}
+.flex-center-l {
+    justify-content: center;
+}
+.flex-end-l {
+    justify-content: flex-end;
+}
+.flex-top-l {
+    align-items: flex-start;
+}
+.flex-middle-l {
+    align-items: center;
+}
+.flex-bottom-l {
+    align-items: flex-end;
+}
+.flex-wrap-l {
+    flex-wrap: wrap;
+}
+.flex-no-wrap-l {
+    flex-wrap: nowrap;
+}
+.left-l {
+    float: left;
+}
+.right-l {
+    float: right;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.no-float-xl {
+    float: none;
+}
+.no-padding-xl {
+    padding: 0;
+}
+.no-margin-xl {
+    margin: 0;
+}
+.relative-xl {
+    position: relative;
+}
+.absolute-xl {
+    position: absolute;
+}
+.static-xl {
+    position: static;
+}
+.fixed-xl {
+    position: fixed;
+}
+.none-xl {
+    display: none;
+}
+.block-xl {
+    display: block;
+}
+.inline-block-xl {
+    display: inline-block;
+}
+.inline-xl {
+    display: inline;
+}
+.flex-xl {
+    display: flex;
+}
+.flex-row-xl {
+    flex-direction: row;
+}
+.flex-row-reverse-xl {
+    flex-direction: row-reverse;
+}
+.flex-column-xl {
+    flex-direction: column;
+}
+.flex-column-reverse-xl {
+    flex-direction: column-reverse;
+}
+.flex-space-around-xl {
+    justify-content: space-around;
+}
+.flex-space-between-xl {
+    justify-content: space-between;
+}
+.flex-start-xl {
+    justify-content: flex-start;
+}
+.flex-center-xl {
+    justify-content: center;
+}
+.flex-end-xl {
+    justify-content: flex-end;
+}
+.flex-top-xl {
+    align-items: flex-start;
+}
+.flex-middle-xl {
+    align-items: center;
+}
+.flex-bottom-xl {
+    align-items: flex-end;
+}
+.flex-wrap-xl {
+    flex-wrap: wrap;
+}
+.flex-no-wrap-xl {
+    flex-wrap: nowrap;
+}
+.left-xl {
+    float: left;
+}
+.right-xl {
+    float: right;
+}
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pad-top-5 {
+    padding-top: 5px;
+}
+.pad-top-10 {
+    padding-top: 10px;
+}
+.pad-top-15 {
+    padding-top: 15px;
+}
+.pad-top-20 {
+    padding-top: 20px;
+}
+.pad-top-25 {
+    padding-top: 25px;
+}
+.pad-top-30 {
+    padding-top: 30px;
+}
+.pad-top-35 {
+    padding-top: 35px;
+}
+.pad-top-40 {
+    padding-top: 40px;
+}
+.pad-top-45 {
+    padding-top: 45px;
+}
+.pad-top-50 {
+    padding-top: 50px;
+}
+.pad-top-55 {
+    padding-top: 55px;
+}
+.pad-top-60 {
+    padding-top: 60px;
+}
+.pad-bottom-5 {
+    padding-bottom: 5px;
+}
+.pad-bottom-10 {
+    padding-bottom: 10px;
+}
+.pad-bottom-15 {
+    padding-bottom: 15px;
+}
+.pad-bottom-20 {
+    padding-bottom: 20px;
+}
+.pad-bottom-25 {
+    padding-bottom: 25px;
+}
+.pad-bottom-30 {
+    padding-bottom: 30px;
+}
+.pad-bottom-35 {
+    padding-bottom: 35px;
+}
+.pad-bottom-40 {
+    padding-bottom: 40px;
+}
+.pad-bottom-45 {
+    padding-bottom: 45px;
+}
+.pad-bottom-50 {
+    padding-bottom: 50px;
+}
+.pad-bottom-55 {
+    padding-bottom: 55px;
+}
+.pad-bottom-60 {
+    padding-bottom: 60px;
+}
+.pad-5 {
+    padding: 5px;
+}
+.pad-10 {
+    padding: 10px;
+}
+.pad-15 {
+    padding: 15px;
+}
+.pad-20 {
+    padding: 20px;
+}
+.pad-25 {
+    padding: 25px;
+}
+.pad-30 {
+    padding: 30px;
+}
+.pad-35 {
+    padding: 35px;
+}
+.pad-40 {
+    padding: 40px;
+}
+.pad-45 {
+    padding: 45px;
+}
+.pad-50 {
+    padding: 50px;
+}
+.pad-55 {
+    padding: 55px;
+}
+.pad-60 {
+    padding: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+.pad-top-0-m {
+    padding-top: 0;
+}
+.pad-top-5-m {
+    padding-top: 5px;
+}
+.pad-top-10-m {
+    padding-top: 10px;
+}
+.pad-top-15-m {
+    padding-top: 15px;
+}
+.pad-top-20-m {
+    padding-top: 20px;
+}
+.pad-top-25-m {
+    padding-top: 25px;
+}
+.pad-top-30-m {
+    padding-top: 30px;
+}
+.pad-top-35-m {
+    padding-top: 35px;
+}
+.pad-top-40-m {
+    padding-top: 40px;
+}
+.pad-top-45-m {
+    padding-top: 45px;
+}
+.pad-top-50-m {
+    padding-top: 50px;
+}
+.pad-top-55-m {
+    padding-top: 55px;
+}
+.pad-top-60-m {
+    padding-top: 60px;
+}
+.pad-bottom-0-m {
+    padding-bottom: 0;
+}
+.pad-bottom-5-m {
+    padding-bottom: 5px;
+}
+.pad-bottom-10-m {
+    padding-bottom: 10px;
+}
+.pad-bottom-15-m {
+    padding-bottom: 15px;
+}
+.pad-bottom-20-m {
+    padding-bottom: 20px;
+}
+.pad-bottom-25-m {
+    padding-bottom: 25px;
+}
+.pad-bottom-30-m {
+    padding-bottom: 30px;
+}
+.pad-bottom-35-m {
+    padding-bottom: 35px;
+}
+.pad-bottom-40-m {
+    padding-bottom: 40px;
+}
+.pad-bottom-45-m {
+    padding-bottom: 45px;
+}
+.pad-bottom-50-m {
+    padding-bottom: 50px;
+}
+.pad-bottom-55-m {
+    padding-bottom: 55px;
+}
+.pad-bottom-60-m {
+    padding-bottom: 60px;
+}
+.pad-0-m {
+    padding: 0;
+}
+.pad-5-m {
+    padding: 5px;
+}
+.pad-10-m {
+    padding: 10px;
+}
+.pad-15-m {
+    padding: 15px;
+}
+.pad-20-m {
+    padding: 20px;
+}
+.pad-25-m {
+    padding: 25px;
+}
+.pad-30-m {
+    padding: 30px;
+}
+.pad-35-m {
+    padding: 35px;
+}
+.pad-40-m {
+    padding: 40px;
+}
+.pad-45-m {
+    padding: 45px;
+}
+.pad-50-m {
+    padding: 50px;
+}
+.pad-55-m {
+    padding: 55px;
+}
+.pad-60-m {
+    padding: 60px;
+}
+}
+
+@media only screen and (min-width: 980px) {
+.pad-top-0-l {
+    padding-top: 0;
+}
+.pad-top-5-l {
+    padding-top: 5px;
+}
+.pad-top-10-l {
+    padding-top: 10px;
+}
+.pad-top-15-l {
+    padding-top: 15px;
+}
+.pad-top-20-l {
+    padding-top: 20px;
+}
+.pad-top-25-l {
+    padding-top: 25px;
+}
+.pad-top-30-l {
+    padding-top: 30px;
+}
+.pad-top-35-l {
+    padding-top: 35px;
+}
+.pad-top-40-l {
+    padding-top: 40px;
+}
+.pad-top-45-l {
+    padding-top: 45px;
+}
+.pad-top-50-l {
+    padding-top: 50px;
+}
+.pad-top-55-l {
+    padding-top: 55px;
+}
+.pad-top-60-l {
+    padding-top: 60px;
+}
+.pad-bottom-0-l {
+    padding-bottom: 0;
+}
+.pad-bottom-5-l {
+    padding-bottom: 5px;
+}
+.pad-bottom-10-l {
+    padding-bottom: 10px;
+}
+.pad-bottom-15-l {
+    padding-bottom: 15px;
+}
+.pad-bottom-20-l {
+    padding-bottom: 20px;
+}
+.pad-bottom-25-l {
+    padding-bottom: 25px;
+}
+.pad-bottom-30-l {
+    padding-bottom: 30px;
+}
+.pad-bottom-35-l {
+    padding-bottom: 35px;
+}
+.pad-bottom-40-l {
+    padding-bottom: 40px;
+}
+.pad-bottom-45-l {
+    padding-bottom: 45px;
+}
+.pad-bottom-50-l {
+    padding-bottom: 50px;
+}
+.pad-bottom-55-l {
+    padding-bottom: 55px;
+}
+.pad-bottom-60-l {
+    padding-bottom: 60px;
+}
+.pad-0-l {
+    padding: 0;
+}
+.pad-5-l {
+    padding: 5px;
+}
+.pad-10-l {
+    padding: 10px;
+}
+.pad-15-l {
+    padding: 15px;
+}
+.pad-20-l {
+    padding: 20px;
+}
+.pad-25-l {
+    padding: 25px;
+}
+.pad-30-l {
+    padding: 30px;
+}
+.pad-35-l {
+    padding: 35px;
+}
+.pad-40-l {
+    padding: 40px;
+}
+.pad-45-l {
+    padding: 45px;
+}
+.pad-50-l {
+    padding: 50px;
+}
+.pad-55-l {
+    padding: 55px;
+}
+.pad-60-l {
+    padding: 60px;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.pad-top-0-xl {
+    padding-top: 0;
+}
+.pad-top-5-xl {
+    padding-top: 5px;
+}
+.pad-top-10-xl {
+    padding-top: 10px;
+}
+.pad-top-15-xl {
+    padding-top: 15px;
+}
+.pad-top-20-xl {
+    padding-top: 20px;
+}
+.pad-top-25-xl {
+    padding-top: 25px;
+}
+.pad-top-30-xl {
+    padding-top: 30px;
+}
+.pad-top-35-xl {
+    padding-top: 35px;
+}
+.pad-top-40-xl {
+    padding-top: 40px;
+}
+.pad-top-45-xl {
+    padding-top: 45px;
+}
+.pad-top-50-xl {
+    padding-top: 50px;
+}
+.pad-top-55-xl {
+    padding-top: 55px;
+}
+.pad-top-60-xl {
+    padding-top: 60px;
+}
+.pad-bottom-0-xl {
+    padding-bottom: 0;
+}
+.pad-bottom-5-xl {
+    padding-bottom: 5px;
+}
+.pad-bottom-10-xl {
+    padding-bottom: 10px;
+}
+.pad-bottom-15-xl {
+    padding-bottom: 15px;
+}
+.pad-bottom-20-xl {
+    padding-bottom: 20px;
+}
+.pad-bottom-25-xl {
+    padding-bottom: 25px;
+}
+.pad-bottom-30-xl {
+    padding-bottom: 30px;
+}
+.pad-bottom-35-xl {
+    padding-bottom: 35px;
+}
+.pad-bottom-40-xl {
+    padding-bottom: 40px;
+}
+.pad-bottom-45-xl {
+    padding-bottom: 45px;
+}
+.pad-bottom-50-xl {
+    padding-bottom: 50px;
+}
+.pad-bottom-55-xl {
+    padding-bottom: 55px;
+}
+.pad-bottom-60-xl {
+    padding-bottom: 60px;
+}
+.pad-0-xl {
+    padding: 0;
+}
+.pad-5-xl {
+    padding: 5px;
+}
+.pad-10-xl {
+    padding: 10px;
+}
+.pad-15-xl {
+    padding: 15px;
+}
+.pad-20-xl {
+    padding: 20px;
+}
+.pad-25-xl {
+    padding: 25px;
+}
+.pad-30-xl {
+    padding: 30px;
+}
+.pad-35-xl {
+    padding: 35px;
+}
+.pad-40-xl {
+    padding: 40px;
+}
+.pad-45-xl {
+    padding: 45px;
+}
+.pad-50-xl {
+    padding: 50px;
+}
+.pad-55-xl {
+    padding: 55px;
+}
+.pad-60-xl {
+    padding: 60px;
+}
+}
+
+.ClassyCountdownDemo { margin:0 auto 30px auto; max-width:800px; width:calc(100%); padding:30px; display:block }
+	#countdown2 { background:#FFF }
+	
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="banner-inner">
+    <div class="header">
+      <div class="container">
+        <div class="flex-m flex-space-between-m"><a class="logo" href="/"><span class="sr">Workshop</span></a>
+          <div class="navigation right-m">
+            <ul class="menu">
+              <li class="menu-item"><a href="#topics">Topics</a></li>
+              <li class="menu-item"><a href="#proposers">Proposers</a></li>
+              <li class="menu-item"><a href="#outlines">Outlines</a></li>
+              <li class="menu-item"><a href="#paticipants">Paticipants</a></li>
+              <li class="menu-item"><a href="#other">Other</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container pad-top-30 pad-top-60-m">
+      <div class="pad-top-50-m pad-bottom-50-m">
+        <h1 class="banner-heading"><span class="banner-heading-text-1">Fine-Grained </span><span class="banner-heading-text-2">Visual Recognition </span><span class="banner-heading-text-3">and re-IDentification</span></h1>
+        <div class="flex-m flex-center-m">
+          <p class="fs-4 no-margin pad-top-10 pad-bottom-40 col-10-m col-7-l banner-text-1">ICPR 2020 Workshop<br><br>Workshop submission deadline: June 15th 2020<br>Workshop author notification: July 15th 2020<br>Camera-ready submission: July 30th 2020<br>Finalized workshop program: August 15th 2020</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="topic-block" id="topic">
+  <div class="container">
+    <div class="flex-m flex-center-m">
+      <div class="col-11-m col-9-l">
+        <h2 class="heading pad-bottom-15"><span class="small-heading">Topics will be covered</span> <span class="big-heading">FGVRID</span></h2>
+        <p class="lead">This workshop will bring together researchers from subfields of patter recognition that have seen growing activity in the past few years: fine-grained visual recognition and person/vehicle re-identification.</p>
+        <p>The ubiquitous surveillance cameras are generating huge amount of videos. Automatic video content analysis and recognition are thus desirable for effective utilization of those data. Fine-Grained Visual Recognition and Re-Identification (FGVRID) aims to accurately identify visual objects and match re-appearing targets, e.g., persons and vehicles from a large set of images and videos. It has the potential to offer an unprecedented possibility for intelligent video processing and analysis, as well as to explore the promising applications on public security. </p>
+        <p>The proposed FGVRID workshop wishes to bring together researchers from fine-grained visual categorization, as well as person/vehicle ReID communities, and to foster discussions and exchange of ideas between them. FGVRID is not a traditional search or classification task due to its goal of accurately identifying visual objects. First, proper detection algorithms should be designed to locate objects and their parts in videos before proceeding to the identification step. Second, the visual appearance of an object is easily affected by many factors like viewpoint changes and camera parameter differences, etc. Third, annotating the fine-grained identity or category cues is expensive and time consuming. Finally, to cope with the large-scale data, scalable indexing or feature coding algorithms should be designed to ensure the online recognition efficiency. Aiming to seek novel solutions and possibilities in FGVRID, this workshop will have in-depth discussions on those issues and aims to go beyond toy datasets and small-scale algorithms. Specifically, the covered topics include, but are not limited to:
+		<ul>
+		  <li>Unsupervised, semi-supervised, and transfer learning algorithms</li>
+	  	  <li>Robust object detection and tracking in the wild</li>
+		  <li>Efficient and effective video representations</li>
+		  <li>Object parsing and layout estimation</li>
+	      <li>Large-scale indexing, feature coding, and retrieval algorithms</li>
+		  <li>Fine-grained visual classification</li>
+		  <li>New problems and datasets for fine-grained visual recognition and re-identification</li>
+		</ul>
+		</p>
+		<p>We envision the workshop to be a process where rewarding discussions take place and outline research directions for years to come. To this end, we want this workshop to begin before its nominal date and to continue after ICPR:
+		<ul>
+		  <li><b>Prior to the workshop</b>, we will collect opinions from the fine-grained visual recognition and person/vehicle re-identification communities on a variety of related topics;</li>
+	  	  <li><b>At the workshop</b>, discussions on research questions as well as further research directions will happen between attendees and invited speakers;</li>
+		  <li><b>After the workshop</b>, special issues on FGVRID in journals like IEEE T-IP and IJCV will be organized. We will also organize further workshops and challenges. </li>
+		</ul>
+		</p>
+		<p class="lead">Relevance and viability</p>
+		<p>Fine-grained visual recognition and person/vehicle re-identification require highly discriminative and robust visual features, as well as efficient learning algorithms that can be optimized with limited training data. They are closely related to many pattern recognition and computer vision tasks like 1) object detection and tracking, 2) object pattern analysis for representation learning, 3) indexing and retrieval, 4) few-shot learning and unsupervised learning, etc. Therefore, the proposed workshop is closely related with the ICPR conference. Recently, an increasing number of works on related topics like fine-grained visual recognition, person re-identification were being published in premier computer vision conferences and journals. Consequently, the relevance between ICPR and this workshop is very high. </p>
+		<p>The proposers are professors working closely on fine-grained visual categorization and person/vehicle ReID. They will invite experts on this topic as Technical Program Committee to ensure the quality of accepted oral and poster papers. The proposers plan to invite 3-5 world-renowned speakers to share their latest works. The proposers are either experienced in organizing conferences, workshops, or have rich experience on fine-grained visual recognition and person/vehicle ReID research. Consequently, the FGVRID is clearly viable.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="proposers-block" id="proposers">
+  <div class="container">
+    <div class="flex-m flex-center-m">
+      <div class="col-11-m col-9-l">
+        <h2 class="heading pad-bottom-15"><span class="small-heading">Proposers</span><span class="big-heading">Introduction to the proposers</span></h2>
+        <p class="lead">The proposers are working closely on fine-grained visual categorization, person/vehicle ReID, and related topics. The group led by Prof. Shiliang Zhang in Peking University has developed several efficient fine-grained visual categorization and multi-camera person ReID systems and have many recent works published in journals and conferences like IEEE T-PAMI, T-IP, ECCV, ICCV, and CVPR. Prof. Guorong Li, Prof. Weigang Zhang, and Prof. Qingming Huang have been working on fine-grained visual categorization and object tracking for more than 10 years. Prof. Nicu Sebe is also widely-known for his important contributions on fine-grained visual categorization and efficient machine learning algorithms. </p>
+        <p class="lead">The proposers are experienced in organizing workshops and conferences. They have successfully organized two related workshop in CVPR2017 and CVPR 2019, i.e., the 1st and 2nd Workshop on Target Re-Identification and Multi-Target Multi-Camera Tracking. Prof. Nicu Sebe was a General Chair of ICMR 2017, ACM Multimedia 2013, ACM Multimedia 2022, etc. </p>
+		 <div class="proposer-list clear-m">
+          <input class="proposer-checkbox" type="radio" name="proposers" id="proposer-1" checked="checked">
+          <label class="proposer-tab proposer-tab-1" for="proposer-1"><span class="sr">proposer 1</span></label>
+          <blockquote class="proposer-item">
+            <p>Received the Ph.D. degree in Computer Science from the Institute of Computing Technology, Chinese Academy of Sciences, in 2012. He was a Post-Doctoral Scientist with NEC Laboratories America and a Post-Doctoral Research Fellow with The University of Texas at San Antonio. He is currently a tenure-track Assistant Professor with the School of Electronic Engineering and Computer Science, Peking University. He has authored or co-authored over 70 papers in journals and conferences, including IEEE Trans. on PAMI, IEEE Tans. on Image Processing, IEEE Trans. on Multimedia, ACM Multimedia, CVPR, ICCV, and ECCV. His research interests include large-scale image retrieval and computer vision. He was a recipient of the Outstanding Doctoral Dissertation Awards from the Chinese Academy of Sciences and Chinese Computer Federation, the President Scholarship from the Chinese Academy of Sciences, the NEC Laboratories America Spot Recognition Award, and the Microsoft Research Fellowship, etc. He was a recipient of the Top 10% Paper Award at the IEEE MMSP 2011. </p>
+            <cite class="clear">
+            <div class="proposer-avatar"><img src="img/Shiliang-Zhang.png" alt="Shiliang Zhang"></div>
+            <div class="proposer-author"><span class="proposer-name block">Shiliang Zhang</span> <span class="proposer-status block">Peking University,slzhang.jdl@pku.edu.cn</span></div>
+            </cite></blockquote>
+          <input class="proposer-checkbox" type="radio" name="proposers" id="proposer-2">
+          <label class="proposer-tab proposer-tab-2" for="proposer-2"><span class="sr">proposer 2</span></label>
+          <blockquote class="proposer-item">
+            <p>Is an Associate Professor with the University of Chinese Academy of Sciences, Beijing. She received the B.S. degree in computer science from the Renmin University of China, Beijing, China, in 2006, and the Ph.D. degree in computer science from the Graduate University of the Chinese Academy of Sciences, Beijing, in 2012. Her current research interests include object tracking, video object segmentation, crowd counting and UAV video analysis.</p>
+            <cite class="clear">
+            <div class="proposer-avatar"><img src="img/Guorong-Li.png" alt="Guorong Li"></div>
+            <div class="proposer-author"><span class="proposer-name block">Guorong Li</span> <span class="proposer-status block">University of Chinese Academy of Sciences, liguorong@ucas.edu.cn</span></div>
+            </cite></blockquote>
+          <input class="proposer-checkbox" type="radio" name="proposers" id="proposer-3">
+          <label class="proposer-tab proposer-tab-3" for="proposer-3"><span class="sr">proposer 3</span></label>
+          <blockquote class="proposer-item">
+            <p>Is an Associate Professor in Harbin Institute of Technology, Weihai and is also a postdoctoral researcher at the University of Chinese Academy of Sciences. He received the Bachelor degree in Computer Science and Technology in 2003, the M.S. and Ph.D. degree in Computer Applied Technology in 2005 and 2016, respectively, all from Harbin Institute of Technology, China. His research interests include video analysis, image processing and pattern recognition. He has published more than 60 academic papers and is the recipient of the Best Student Paper Award at IEEE MIPR 2018.</p>
+            <cite class="clear">
+            <div class="proposer-avatar"><img src="img/Weigang-Zhang.png" alt="Weigang Zhang"></div>
+            <div class="proposer-author"><span class="proposer-name block">Weigang Zhang</span> <span class="proposer-status block">Harbin Institute of Technology, wgzhang@hit.edu.cn</span></div>
+            </cite></blockquote>
+		  <input class="proposer-checkbox" type="radio" name="proposers" id="proposer-4">
+          <label class="proposer-tab proposer-tab-4" for="proposer-4"><span class="sr">proposer 4</span></label>
+          <blockquote class="proposer-item">
+            <p>Is a chair professor in the University of Chinese Academy of Sciences and an adjunct research professor in the Institute of Computing Technology, Chinese Academy of Sciences. He graduated with a Bachelor degree in Computer Science in 1988 and Ph.D. degree in Computer Engineering in 1994, both from Harbin Institute of Technology, China. His research areas include multimedia computing, image processing, computer vision and pattern recognition He has published more than 400 academic papers in prestigious international journals including IEEE Trans. on PAMI, IEEE Trans. on Image Processing, IEEE Trans. on Multimedia, IEEE Trans. on CSVT, etc, and top-level conferences such as NIPS, ICCV, CVPR, ACM Multimedia, IJCAI, AAAI, VLDB, ICPR, etc. He is the associate editor of IEEE Trans. on CSVT and Acta Automatica Sinica, and the reviewer of various international journals including IEEE Trans. on PAMI, IEEE Trans. on Image Processing, IEEE Trans. on Multimedia, etc. He is a Fellow of IEEE and has served as general chair, program chair, track chair and TPC member for various conferences, including ACM Multimedia, CVPR, ICCV, ICME, ICMR, PCM, BigMM, PSIVT, etc.</p>
+            <cite class="clear">
+            <div class="proposer-avatar"><img src="img/Qingming-Huang.png" alt="Qingming Huang"></div>
+            <div class="proposer-author"><span class="proposer-name block">Qingming Huang</span> <span class="proposer-status block">University of Chinese Academy of Sciences, qmhuang@ucas.ac.cn</span></div>
+            </cite></blockquote>
+		  <input class="proposer-checkbox" type="radio" name="proposers" id="proposer-5">
+          <label class="proposer-tab proposer-tab-5" for="proposer-5"><span class="sr">proposer 5</span></label>
+          <blockquote class="proposer-item">
+            <p>Is a Professor at the University of Trento, Italy, leading the research in the areas of multimedia information retrieval and human behavior understanding. He was the General Co- Chair of the IEEE FG Conference 2008 and ACM Multimedia 2013, and the Program Chair of the International Conference on Image and Video Retrieval in 2007 and 2010, ACM Multimedia 2007 and 2011. He is/was the Program Chair of ICCV 2017, ECCV 2016 and ICPR 2020, and a General Chair of ACM ICMR 2017 and ACM Multimedia 2022. He is a fellow of the IAPR.</p>
+            <cite class="clear">
+            <div class="proposer-avatar"><img src="img/Nicu-Sebe.png" alt="Nicu Sebe"></div>
+            <div class="proposer-author"><span class="proposer-name block">Nicu Sebe</span> <span class="proposer-status block">University of Trento, niculae.sebe@unitn.it</span></div>
+            </cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="outlines-block" id="outlines">
+  <div class="container">
+    <div class="flex-m flex-center-m">
+      <div class="col-11-m col-9-l">
+		  <br><br>
+        <h2 class="heading pad-bottom-15"><span class="small-heading">Our Plan </span><span class="big-heading">Program Outline</span></h2>
+        <p class="lead">The workshop will include both invited talks and original submissions selected through a double-blind review process. The proposed length of this workshop is one day. The rough outline and highlights are as follows: </p>
+		<p>1.	3-5 speakers will be invited to give talks in the workshop. Each speaker will give a 45mins talk on fine-grained visual recognition and person/vehicle ReID or related topics. </p>
+		<p>2.	Apart from the invited talks, there will be oral sessions and poster sessions. We plan to accept submissions not according to their achieved performance on public datasets, but rather encourage people to take on a research question related to the topic of the workshop. Examples of such questions are:</p>
+		  <ul>
+			<li>How can fine-grained visual recognition and person/vehicle re-identification benefit each other?</li>
+			<li>How much do object/part detections influence performance in fine-grained visual recognition/re-identification?</li>
+			<li>What are the most challenging issues in fine-grained visual recognition/re-identification?</li>
+			<li>How can fine-grained visual recognition/re-identification and Generative Adversarial Networks (GAN) benefit each other?</li>
+			<li>What are the limitations of existing public benchmark datasets?</li>
+			<li>How to tackle the large-scale fine-grained visual recognition/re-identification problem?</li>
+		  </ul>
+		  <aside id="text" class="widget widget_contact">	
+			  <div class="textwidget"><p><font color="black"> <strong>ICPR 2020 begins:</strong> </font> </p></div></aside>
+		  <aside id="shailan-countdown-widget-2" class="widget widget_contact">		
+				<div id="countdown2" class="ClassyCountdownDemo"></div>
+			 <script>$('#countdown2').ClassyCountdown({
+		end: Date.UTC(2020, 08, 13, 09, 00, 00) / 1000,
+		now: $.now() / 1000,
+		labels: true,
+		style: {
+			element: "",
+			textResponsive: .5,
+			days: {
+				gauge: {
+					thickness: .01,
+					bgColor: "rgba(0,0,0,0.05)",
+					fgColor: "#1abc9c"
+				},
+				textCSS: 'font-family:\'Open Sans\'; font-size:25px; font-weight:300; color:#34495e;'
+			},
+			hours: {
+				gauge: {
+					thickness: .01,
+					bgColor: "rgba(0,0,0,0.05)",
+					fgColor: "#2980b9"
+				},
+				textCSS: 'font-family:\'Open Sans\'; font-size:25px; font-weight:300; color:#34495e;'
+			},
+			minutes: {
+				gauge: {
+					thickness: .01,
+					bgColor: "rgba(0,0,0,0.05)",
+					fgColor: "#8e44ad"
+				},
+				textCSS: 'font-family:\'Open Sans\'; font-size:25px; font-weight:300; color:#34495e;'
+			},
+			seconds: {
+				gauge: {
+					thickness: .01,
+					bgColor: "rgba(0,0,0,0.05)",
+					fgColor: "#f39c12"
+				},
+				textCSS: 'font-family:\'Open Sans\'; font-size:25px; font-weight:300; color:#34495e;'
+			}
+
+		},
+		onEndCallback: function() {
+			console.log("Time out!");
+		}
+	});</script>
+		</aside>
+		  <br><br>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="proposer-block" id="paticipants">
+  <div class="container">
+    <div class="flex-m flex-center-m">
+      <div class="col-11-m col-9-l">
+        <h2 class="heading pad-bottom-15"><span class="small-heading small-heading-secondary">People paticipated</span><span class="big-heading big-heading-secondary">Invited speakers &amp; Expected participants</span></h2>
+		<p class="lead"><strong>The proposers will invite the following speakers (to be confirmed):</strong></p>
+		<h5>(1) Wei-Shi Zheng, Sun Yat-sen University, zhwshi@mail.sysu.edu.cn</h5>
+		<h5>(2) Alberto Del Bimbo, University of Florence, alberto.delbimbo@unifi.it</h5>
+		<h5>(3) Rita Cucchiara, University of Modena and Reggio Emilia, rita.cucchiara@unimore.it</h5>
+		<h5>(4) Alan Hanjalic, Delft University of Technology, A.hanjalic@utdelft.nl</h5>
+		<h5>(5) Cees G.M. Snoek, University of Amsterdam, cgmsnoek@uva.nl</h5>
+		<h5>(6) Elisa Ricci, University of Trento, e.ricci@unitn.it</h5>
+		<h5>(7) Qi Tian, Huawei Research, q-tian@hotmail.com </h5><br>
+		  <h5>Fine-grained visual recognition/re-identification are important topics for both the academia and industry. It is also an interdisciplinary research topic among Pattern Recognition, Computer Vision, Multimedia, and Machine Learning fields. For example, the advances in object detection, distance metric learning, and deep learning have significantly boosted the performance of person ReID. Meanwhile, the research efforts in person ReID are potential to provide new possibilities for efficient object detection, zero-shot deep learning, scalable indexing and searching, etc. Moreover, the FGVRID would be a unique platform allowing world-renowned researchers to share their thoughts and works on related topics. Therefore, this workshop would interest lots of ICPR attendees. The expected number of attendees is 30-50. </h5><br>
+			<h5>The FGVRID has broad coverage on related topics in Pattern Recognition, Computer Vision, Multimedia, and Machine Learning. It is expected to attract researchers working on both this topic and other related fields to submit papers. </h5>
+
+	</div>
+    </div>
+  </div>
+</div>
+<div class="contact-block pad-top-40 pad-bottom-40 pad-top-60-m pad-bottom-60-m" id="other">
+  <div class="container">
+    <div class="flex-l flex-center-l">
+      <div class="col-11-m col-9-l">
+        <h2 class="heading pad-bottom-15"><span class="small-heading small-heading-secondary">Other infomation</span><span class="big-heading big-heading-secondary">Related Workshops</span></h2>
+        <div>
+          <div>
+			 <p class="lead">The followings are some recent workshops focusing on Fine-Grained Visual Categorization, person ReID, visual retrieval, and action recognition:</p>
+			 <ul>
+			<li>Workshop on Fine-Grained Visual Categorization in CVPR 2019, CVPR 2018, CVPR 2017, CVPR 2015, CVPR 2013, and CVPR 2011. Organized by Ryan Farrell, et al.</li>
+			<li>Workshop on Target Re-Identification and Multi-Target Multi-Camera Tracking in CVPR 2019. Organized by Ergys Ristani, Liang Zheng, Xiatian Zhu, Shiliang Zhang, Jingdong Wang, Shaogang Gong, Qi Tan, Carlo Tomasi, Richard Hartley</li>
+			<li>Workshop on Target Re-Identification and Multi-Target Multi-Camera Tracking in CVPR 2017. Organized by Rita Cucchiara, Wen Gao, Shaogang Gong, Thomas S. Huang, Ergys Ristani, Francesco Solera, Qi Tian, Carlo Tomasi, Simone Calderara, Cees G.M. Snoek, Jingdong Wang, Shiliang Zhang</li>
+			<li>Visual Surveillance and Re-identification in ECCV 2014. Organized by Shaogang Gong, Steve Maybank, James Orwell, Marco Cristani, Kaiqi Huang, and Shuicheng Yan</li>
+			<li>International Workshop on Large Scale Visual Recognition and Retrieval in CVPR 2015. Organized by Samy Bengio, Fei-Fei Li, Olga Russakovsky, Jason Corso, Jia Deng, and Yuanqing Lin</li>
+			<li>Large-Scale Video Search and Mining (LSVSM) in CVPR 2015. Organized by Junsong Yuan, Shih-Fu Chang, and John Smith</li>
+			</ul><br>
+			<p>As can be seen from the above list, there have been many workshops related to fine-grained visual categorization and person ReID. However, fine-grained visual categorization and person/vehicle ReID have achieved significant progress in 2019, e.g., the Rank-1 Acc. on Market1501 has achieved 95+% by designing powerful deep models and global-local features. Moreover, many new problems are being explored, e.g., the applications of Generative Adversarial Networks for data augmentation and transfer, the unsupervised learning strategies. Also, fine-grained visual recognition and person/vehicle ReID are closely related, but are treated as different topics in previous workshops. Therefore, it is necessary to gather researchers in fine grained visual recognition and person/vehicle ReID communities together and share their latest works and ideas.</p><br>
+			  <p class="lead"><strong>Contct Us</strong></p>
+		 	 <ul class="contact-list pad-bottom-15">
+              <li class="contact-icon contact-icon-location">Harbin institute of technology,No.2 Wenhua West Road, Weihai, China</li>
+              <li class="contact-icon contact-icon-phone">+86 13626303639</li>
+              <li class="contact-icon contact-icon-email"><a href="mailto:wgzhang@hit.edu.cn?subject=General%20Enquiry">wgzhang@hit.edu.cn</a></li>
+			  </ul>
+			  <a href="https://iapr.org"><img src="img/IAPR.gif"></a>
+				  &nbsp;&nbsp;
+			 <a href="https://www.computer.org"><img src="img/IEEE.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
